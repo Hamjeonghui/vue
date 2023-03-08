@@ -66,9 +66,6 @@
         },methods :{
             popOfWrite: function(){
                 this.openPop=true;
-            },
-            closePop: function(){
-                this.openPop=false;
             }
         },
         data() {
@@ -118,14 +115,12 @@
         justify-content: center;
         align-items: center;
     }
-
-    #videoTop {
-        padding: 0px 30px 0px 30px;
-    }
-
-    #videoTop > p {
+    .insideIcon p{
         text-align: center;
         width: 40%;
+    }
+    #videoTop {
+        padding: 0px 30px 0px 30px;
     }
 
     #videoBottom {

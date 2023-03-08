@@ -1,6 +1,6 @@
 <template>
     <!-- 모달 구현을 위한 배경 포함 화면 -->
-    <div id="popback" v-if="popCheck==true" @dblclick="$emit('closePop')">
+    <div id="popback" v-if="popCheck==true">
         <!-- 팝업 영역 -->
         <div id="pop">
 
@@ -13,10 +13,12 @@
 
                 </div>
                 <div class="write">
-                    <input type="text" style="background: #F2B263; width: 97%" />
+                    <input type="text" style="background: #F2B263; width: 97%; height: 400px;"/>
                 </div>
             </div>
-            <div class="button"></div>
+            <div class="button">
+                <button>게시</button>
+            </div>
 
         </div>
         <!-- /팝업 영역 -->
@@ -63,5 +65,24 @@
     }
     #close:hover{
         cursor: pointer;
+    }
+    .button{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0px 10px 0px;
+    }
+    .button > button {
+        border: none;
+        border-radius: 10px;
+        width:95%;
+        height: 40px;
+        background: #86A69D;
+    }
+    .button > button:hover {
+        cursor: pointer;
+    }
+    .button > button:active {
+        background: #86A09D;
     }
 </style>
