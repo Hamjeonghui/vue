@@ -13,11 +13,18 @@
             <div id="imgWrap">
                 <img :src="i.imageSrc" />
             </div>
+            <!-- 좋아요 버튼까지 -->
         </div>
         <!-- /글본문 -->
 
         <!-- 댓글 및 좋아요 -->
         <div>
+            <div class="insideIcon">
+
+            </div>
+            <div class="insideIcon">
+
+            </div>
         </div>
         <!-- /댓글 및 좋아요 -->
     </div>
@@ -51,5 +58,10 @@
     #imgWrap{
         display: flex;
         justify-content: center;
+    }
+    .insideIcon{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 </style>

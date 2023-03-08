@@ -6,13 +6,14 @@
 
     <!-- 콘텐츠 -->
     <div id="middleBox">
+        <PopWrite v-bind:pop-check="openPop" />
         <!-- 게시글작성-->
         <div class="boxWrap">
             <div class="video box">
                 <div id="videoTop" class="borderBtm insideIcon">
-                    <p>스토리</p>
-                    <p>릴스</p>
-                    <p>룸스</p>
+                    <p class="hoverStyle">스토리</p>
+                    <p class="hoverStyle">릴스</p>
+                    <p class="hoverStyle">룸스</p>
                 </div>
                 <div id="videoBottom">
                     <p>친구 및 가족과 모든 일상을 공유해보세요.</p>
@@ -24,13 +25,13 @@
             </div>
             <div class="write box">
                 <div class="insideIcon borderBtm">
-                    <img src="https://img.icons8.com/pastel-glyph/2x/gender-neutral-user.png" alt="profile" />
-                    <input class="writeBox" type="text" :value="userName" readonly />
+                    <img src="https://img.icons8.com/pastel-glyph/2x/gender-neutral-user.png" alt="profile"/>
+                    <input @click="popOfWrite()" class="writeBox hoverStyle" type="text" :value="userName" readonly/>
                 </div>
                 <div class="insideIcon">
-                    <p>라이브 방송</p>
-                    <p>사진/동영상</p>
-                    <p>기분/활동</p>
+                    <p class="hoverStyle">라이브 방송</p>
+                    <p class="hoverStyle">사진/동영상</p>
+                    <p class="hoverStyle">기분/활동</p>
                 </div>
             </div>
         </div>
@@ -52,18 +53,28 @@
 
 <script>
     import ContentCard from "@/components/contentBox/ContentCard";
+    import PopWrite from "@/components/contentBox/PopWrite";
 
     export default {
         name: "ContentBox",
         components: {
-            ContentCard
+            ContentCard,
+            PopWrite
         },
         props: {
             name: String
+        },methods :{
+            popOfWrite: function(){
+                this.openPop=true;
+            },
+            closePop: function(){
+                this.openPop=false;
+            }
         },
-        data(){
-            return{
-                userName: this.name+"님, 무슨 생각을 하고 계신가요?",
+        data() {
+            return {
+                openPop: false,
+                userName: this.name + "님, 무슨 생각을 하고 계신가요?",
                 conData: [
                     {
                         writer: "김대현",
@@ -89,9 +100,11 @@
         background: #F2E8DF;
         box-shadow: 0px 0.05px 5px 0px #F28585;
     }
-    .boxWrap{
+
+    .boxWrap {
         width: 100%;
     }
+
     #middleBox {
         width: 40%;
         display: flex;
@@ -99,19 +112,23 @@
         justify-content: center;
         align-items: center;
     }
-    .insideIcon{
+
+    .insideIcon {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    #videoTop{
+
+    #videoTop {
         padding: 0px 30px 0px 30px;
     }
-    #videoTop > p{
+
+    #videoTop > p {
         text-align: center;
         width: 40%;
     }
-    #videoBottom{
+
+    #videoBottom {
         padding: 0px 0px 5px 30px;
     }
 
@@ -122,15 +139,18 @@
     #leftBox {
         width: 20%;
     }
-    img[alt='profile']{
+
+    img[alt='profile'] {
         width: 50px;
         height: 50px;
     }
-    .writeBox{
+
+    .writeBox {
         width: 80%;
         height: 30px;
     }
-    .borderBtm{
+
+    .borderBtm {
         border-bottom: #F2C6C2 thin solid;
     }
 </style>
