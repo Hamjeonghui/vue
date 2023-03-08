@@ -1,12 +1,12 @@
 <template>
     <!-- 모달 구현을 위한 배경 포함 화면 -->
-    <div id="popback" v-if="popCheck==true">
+    <div id="popback" v-if="popCheck==true" @dblclick="$emit('closePop')">
         <!-- 팝업 영역 -->
         <div id="pop">
 
             <div class="header borderBtm">
                 <h1>게시물 작성하기</h1>
-                <img id="close" src="https://img.icons8.com/color/512/close-window.png" alt="닫기버튼" />
+                <img @click="$emit('closePop')" id="close" src="https://img.icons8.com/color/512/close-window.png" alt="닫기버튼" />
             </div>
             <div class="content">
                 <div class="writer">

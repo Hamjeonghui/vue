@@ -6,7 +6,7 @@
 
     <!-- 콘텐츠 -->
     <div id="middleBox">
-        <PopWrite v-bind:pop-check="openPop" />
+        <PopWrite v-bind:pop-check="openPop" @closePop="openPop=false" />
         <!-- 게시글작성-->
         <div class="boxWrap">
             <div class="video box">
