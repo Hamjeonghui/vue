@@ -36,6 +36,10 @@
         height: 25px;
         padding: 0px 10px 0px 10px;
     }
+    .hoverStyle:hover{
+        cursor: pointer;
+        background: #F28585;
+    }
     hr{
         border-color: #F28585;
         border-width: thin;
