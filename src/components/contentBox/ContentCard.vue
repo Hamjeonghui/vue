@@ -48,7 +48,6 @@
         padding: 10px 10px 10px 10px;
         box-sizing: border-box;
     }
-
     #imgWrap{
         display: flex;
         justify-content: center;
