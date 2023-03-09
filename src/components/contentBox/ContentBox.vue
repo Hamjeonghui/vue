@@ -6,7 +6,7 @@
 
     <!-- 콘텐츠 -->
     <div id="middleBox">
-        <PopWrite v-bind:pop-check="openPop" @closePop="openPop=false" />
+        <PopWrite v-bind:pop-check="openPop" :user-name="userName" @closePop="openPop=false" />
         <!-- 게시글작성-->
         <div class="boxWrap">
             <div class="video box">
@@ -108,6 +108,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-bottom: 20px;
     }
 
     .insideIcon {
