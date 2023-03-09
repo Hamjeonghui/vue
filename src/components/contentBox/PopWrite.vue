@@ -14,7 +14,7 @@
                     <img class="profile" src="https://img.icons8.com/pastel-glyph/2x/gender-neutral-user.png"
                          alt="profile"/>
                     <div>
-                        <h3>{{user}}</h3>
+                        <h3>{{userData.name}}</h3>
                         <p>{{thisTime}}</p>
                     </div>
                 </div>
@@ -37,11 +37,11 @@
         name: "PopWrite",
         props: {
             popCheck: Boolean,
-            userName: String
+            userData: Object
         },
         data() {
             return {
-                user: this.userName.replace("님, 무슨 생각을 하고 계신가요?", ""),
+                userName: this.userData.name+"님, 무슨 생각을 하고 계신가요?",
                 thisTime: new Date()
             }
         },

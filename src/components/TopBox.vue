@@ -25,11 +25,11 @@
     export default {
         name: 'TopBox',
         props: {
-            name: String
+            userData: Object
         },
         data() {
             return {
-                userName: this.name+"님, 반가와요",
+                userName: this.userData.name+"님, 반가와요",
                 commonitems: [
                     {
                         id: 1,

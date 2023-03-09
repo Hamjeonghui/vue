@@ -7,7 +7,7 @@
 
     <!-- 콘텐츠 -->
     <div id="middleBox">
-        <PopWrite v-bind:pop-check="openPop" :user-name="userName" @closePop="openPop=false" />
+        <PopWrite v-bind:pop-check="openPop" :user-data="userData" @closePop="openPop=false" />
         <!-- 게시글작성-->
         <div class="boxWrap">
             <div class="video box">
@@ -68,7 +68,7 @@
             RightBox
         },
         props: {
-            name: String
+            userData: Object
         },methods :{
             popOfWrite: function(){
                 this.openPop=true;
@@ -77,7 +77,7 @@
         data() {
             return {
                 openPop: false,
-                userName: this.name + "님, 무슨 생각을 하고 계신가요?",
+                userName: this.userData.name + "님, 무슨 생각을 하고 계신가요?",
                 conData: [
                     {
                         writer: "웰시콕이",
