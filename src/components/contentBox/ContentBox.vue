@@ -1,8 +1,9 @@
 <template>
-    <!-- 연락처 -->
-    <div id="rightBox">
+    <!-- 개인창 -->
+    <div id="leftBox">
+        <LeftBox />
     </div>
-    <!-- /연락처 -->
+    <!-- /개인창 -->
 
     <!-- 콘텐츠 -->
     <div id="middleBox">
@@ -45,21 +46,26 @@
     </div>
     <!-- /콘텐츠 -->
 
-    <!-- 개인창 -->
-    <div id="leftBox">
+    <!-- 연락처 -->
+    <div id="rightBox">
+        <RightBox />
     </div>
-    <!-- /개인창 -->
+    <!-- /연락처 -->
 </template>
 
 <script>
+    import LeftBox from "@/components/LeftBox";
     import ContentCard from "@/components/contentBox/ContentCard";
     import PopWrite from "@/components/contentBox/PopWrite";
+    import RightBox from "@/components/RightBox";
 
     export default {
         name: "ContentBox",
         components: {
+            LeftBox,
             ContentCard,
-            PopWrite
+            PopWrite,
+            RightBox
         },
         props: {
             name: String
@@ -74,13 +80,13 @@
                 userName: this.name + "님, 무슨 생각을 하고 계신가요?",
                 conData: [
                     {
-                        writer: "김대현",
-                        text: "어쩌구저쩌구",
+                        writer: "웰시콕이",
+                        text: "가만히 서 있기만 해도 귀엽지?",
                         imageSrc: "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F998C26415D1B512A08"
                     },
                     {
-                        writer: "이정수",
-                        text: "욜래쑐래",
+                        writer: "시바놈",
+                        text: "높이 뛰어오른 나, 제법 멋져요",
                         imageSrc: "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Ft1.daumcdn.net%2Fcfile%2Ftistory%2F99A1F0415D1B512C0E"
                     }
                 ]

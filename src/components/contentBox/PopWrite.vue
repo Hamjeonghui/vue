@@ -92,8 +92,6 @@
 
                 thisTime=fmt
 
-                console.log(this.thisTime)
-
                 return thisTime
             }
         }
