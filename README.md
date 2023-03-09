@@ -1,5 +1,7 @@
 # vue
-
+```
+IDE: intelliJ
+```
 ## Project setup
 ```
 npm install
