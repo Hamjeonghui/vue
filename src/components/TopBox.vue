@@ -1,9 +1,14 @@
 <template>
+    <!-- 헤더 -->
     <div id="header">
+        <!-- 로고 -->
         <div id="logo">
             <img @click="test" src="../assets/logo.png" alt="로고 이미지"/>
             <input style="text" v-bind:value="userName"/>
         </div>
+        <!-- /로고 -->
+
+        <!-- 공통 서비스 아이콘 영역 -->
         <div id="common-topService">
             <ul>
                 <li v-for="item in commonitems" :key="item">
@@ -11,6 +16,9 @@
                 </li>
             </ul>
         </div>
+        <!-- /공통 서비스 아이콘 영역 -->
+
+        <!-- 개인 서비스 아이콘 영역 -->
         <div id="login-topService">
             <ul>
                 <li v-for="item in serviceitem" :key="item">
@@ -18,7 +26,9 @@
                 </li>
             </ul>
         </div>
+        <!-- /개인 서비스 아이콘 영역 -->
     </div>
+    <!-- /헤더 -->
 </template>
 
 <script>
@@ -75,8 +85,6 @@
                     }
                 ]
             };
-        },
-        methods: {
         }
     };
 </script>

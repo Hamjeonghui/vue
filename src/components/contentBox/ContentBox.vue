@@ -1,7 +1,7 @@
 <template>
     <!-- 개인창 -->
     <div id="leftBox">
-        <LeftBox />
+        <LeftBox :user-data="userData"/>
     </div>
     <!-- /개인창 -->
 
@@ -24,9 +24,9 @@
             </div>
             <div class="info box">
             </div>
-            <div class="write box">
+            <div id="insertBox" class="write box">
                 <div class="insideIcon borderBtm">
-                    <img src="https://img.icons8.com/pastel-glyph/2x/gender-neutral-user.png" alt="profile"/>
+                    <img class="profileImg" :src="userData.profile" alt="profile"/>
                     <input @click="popOfWrite()" class="writeBox hoverStyle" type="text" :value="userName" readonly/>
                 </div>
                 <div class="insideIcon">
@@ -48,7 +48,7 @@
 
     <!-- 연락처 -->
     <div id="rightBox">
-        <RightBox />
+        <RightBox :user-data="userData"/>
     </div>
     <!-- /연락처 -->
 </template>
@@ -103,11 +103,15 @@
         background: #F2E8DF;
         box-shadow: 0px 0.05px 5px 0px #F28585;
     }
-
     .boxWrap {
         width: 100%;
     }
-
+    #leftBox{
+        margin-top: 15px;
+    }
+    #rightBox{
+        margin-top: 15px;
+    }
     #middleBox {
         width: 40%;
         display: flex;
@@ -115,12 +119,6 @@
         justify-content: center;
         align-items: center;
         padding-bottom: 20px;
-    }
-
-    .insideIcon {
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
     .insideIcon p{
         text-align: center;
@@ -133,7 +131,10 @@
     #videoBottom {
         padding: 0px 0px 5px 30px;
     }
-
+    #insertBox{
+        padding: 0px 10px 0px 10px;
+        box-sizing: border-box;
+    }
     #rightBox {
         width: 20%;
     }

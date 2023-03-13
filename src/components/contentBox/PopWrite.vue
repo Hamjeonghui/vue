@@ -11,7 +11,7 @@
             </div>
             <div class="content">
                 <div class="writer">
-                    <img class="profile" src="https://img.icons8.com/pastel-glyph/2x/gender-neutral-user.png"
+                    <img class="profileImg" :src="userData.profile"
                          alt="profile"/>
                     <div>
                         <h3>{{userData.name}}</h3>
@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="write">
-                    <textarea :value="userName" id="writeInput"></textarea> <!-- 개행을 위한 태그 -->
+                    <textarea :placeholder="userName" id="writeInput"></textarea> <!-- 개행을 위한 태그 -->
                 </div>
             </div>
             <div class="button">
@@ -111,6 +111,7 @@
     }
 
     #pop {
+        padding: 10px 10px 10px 10px;
         background: #F2B263;
         width: 65%;
     }
@@ -164,11 +165,6 @@
         align-items: center;
     }
 
-    .profile {
-        width: 100px;
-        height: 100px;
-    }
-
     .write {
         display: flex;
         justify-content: center;
@@ -182,5 +178,7 @@
         border: none;
         color: #F2E8DF;
         font-size: 20px;
+        resize: none;
+        padding: 10px 0px 10px 0px;
     }
 </style>

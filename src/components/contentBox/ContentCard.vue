@@ -59,9 +59,4 @@
         display: flex;
         justify-content: center;
     }
-    .insideIcon{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
 </style>
