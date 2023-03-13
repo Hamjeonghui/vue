@@ -7,7 +7,7 @@
 
     <!-- 콘텐츠 -->
     <div id="middleBox">
-        <PopWrite v-bind:pop-check="openPop" :user-data="userData" @closePop="openPop=false" />
+        <PopWrite v-bind:pop-check="openPop" :user-data="userData" @closePop="closeOfWrie()" />
         <!-- 게시글작성-->
         <div class="boxWrap">
             <div class="video box">
@@ -72,6 +72,9 @@
         },methods :{
             popOfWrite: function(){
                 this.openPop=true;
+            },
+            closeOfWrie: function(){
+                this.openPop=false
             }
         },
         data() {
