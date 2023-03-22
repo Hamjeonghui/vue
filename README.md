@@ -1,6 +1,7 @@
 # vue
 ```
 IDE: intelliJ
+레퍼지토리 중에서 backend라는 이름을 가진 server프로젝트 친구랑 연동되었슈
 ```
 ## Project setup
 ```

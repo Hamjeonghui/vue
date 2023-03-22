@@ -43,22 +43,22 @@
                 commonitems: [
                     {
                         id: 1,
-                        image: require('../assets/free-icon-font-home-3917033.svg'),
+                        image: require('@/assets/free-icon-font-home-3917033.svg'),
                         title: 'home'
                     },
                     {
                         id: 2,
-                        image: require('../assets/free-icon-font-book-open-reader-7720173.svg'),
+                        image: require('@/assets/free-icon-font-book-open-reader-7720173.svg'),
                         title: 'book'
                     },
                     {
                         id: 3,
-                        image: require('../assets/free-icon-font-album-9083439.svg'),
+                        image: require('@/assets/free-icon-font-album-9083439.svg'),
                         title: 'album'
                     },
                     {
                         id: 4,
-                        image: require('../assets/free-icon-font-head-side-thinking-5069176.svg'),
+                        image: require('@/assets/free-icon-font-head-side-thinking-5069176.svg'),
                         title: 'headset'
                     },
                 ],
