@@ -3,7 +3,6 @@
     <TopBox v-bind:user-data="userData"/>
     <div id="contentWrap">
         <ContentBox v-bind:user-data="userData"/>
-    <router-link to="/home">home</router-link>
     </div>
 
 </template>
