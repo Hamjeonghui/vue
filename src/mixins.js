@@ -5,7 +5,7 @@ import axios from "axios"; // ajax대신
 // 파일 생성 후 main.js에 import를 해줄 필요가 있다.
 export default {
     methods: {
-        async $api(url, method, data){
+        async $callApi(url, method, data){
             return (
                 await axios({method: method, url, data}).catch(e => {
                     console.log(e)
