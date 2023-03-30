@@ -11,7 +11,7 @@ const router = createRouter({
         { path : "/", name : "main", component : MainPage },
         { path : "/home", name : "home", component : Home },
         { path : "/error", name : "not-found", component : ErrorPage },
-        { path : "/yebo", name : "yebo", component : YEBO},
+        { path : "/yebovue", name : "yebo", component : YEBO},
     ]
 });
 

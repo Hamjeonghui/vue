@@ -5,6 +5,15 @@ import axios from "axios"; // ajax대신
 // 파일 생성 후 main.js에 import를 해줄 필요가 있다.
 export default {
     methods: {
+        // 함수를 비동기 함수로 만들어주는 예약어.
+        // 이 함수가 호출됨으로써 메서드의 코드를 순차적으로 실행하지 않고,
+        // 코드 실행 중 await가 있는 곳에서 일시적으로 코드 실행 중단 후,
+        // await단이 처리되면 그 후 결과값을 반환한다.
+        // axiod가 비동기니까, 얘를 동기처럼 하게 해줌
+        // 이 메서드를 다른 컴포에서도 공통으로 쓰려면 api요청 후에
+        // 데이터 도착을 기다려야 한다. 그래서 동기적으로 변환되게 함.
+        // ajax에서는 데이터 오기 전에 다른 코드들도 실행해야 해서 비동기를 썼지만
+        // 여기서는 위와 같은 설명 때문에 굳이 비동기적메서드를 동기적인 특성으로 변경해서 사용한다.
         async $callApi(url, method, data){
             return (
                 await axios({method: method, url, data}).catch(e => {
@@ -13,4 +22,4 @@ export default {
             ).data;
         }
     }
-}
+}//뭔소리여;;;;;;;;;;
